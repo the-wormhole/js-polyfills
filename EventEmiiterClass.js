@@ -20,7 +20,7 @@ function EventEmitter(){
     this.emit = function(eventName,data=""){
 
         if(listeners.hasOwnProperty(eventName) === false){
-            throw new Error("No such event declared!!");
+            throw new Error(`No such event declared!! - ${eventName}`);
         }
         
         var allActions = listeners[eventName];
